@@ -3,6 +3,11 @@ let loveCounter = document.getElementById('lovecounter')
 let loveCount = 0;
 
 
+// for coin counting 
+let coinElement = document.getElementById('coinAmount')
+let coinAmount = parseInt(coinElement.innerText);
+
+
 // love counter starts here
 
 loveIcons.forEach((icon) => {
@@ -33,6 +38,15 @@ callbtn.forEach((btn) => {
         let serviceName = parent.querySelector('.service-name').innerText;
         let serviceNumber = parent.querySelector('.service-number').innerText;
 
-        alert(`📞 calling ${serviceName} at ${serviceNumber}...`)
+
+        if (coinAmount >= 20) {
+            alert(`📞 calling ${serviceName} at ${serviceNumber}...`)
+            coinAmount = coinAmount - 20;
+            coinElement.innerText = coinAmount
+        }
+        else {
+            alert('❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে')
+        }
+
     })
 })
