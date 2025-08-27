@@ -17,7 +17,22 @@ loveIcons.forEach((icon) => {
                 loveCount++;
             }
         })
-        
+
         loveCounter.innerText = loveCount
     })
 });
+
+
+// call functionality starts here
+
+let callbtn = document.querySelectorAll('.card-call')
+
+callbtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        let parent = btn.parentNode.parentNode
+        let serviceName = parent.querySelector('.service-name').innerText;
+        let serviceNumber = parent.querySelector('.service-number').innerText;
+
+        alert(`📞 calling ${serviceName} at ${serviceNumber}...`)
+    })
+})
