@@ -93,3 +93,22 @@ clearBtn.addEventListener('click', () => {
     rightDown.innerHTML = ''
     callHistory = []
 })
+
+//copy button work starts here
+
+let copyBtn = document.querySelectorAll('.copyBtn')
+let copyCountElement = document.getElementById('copyCounter');
+let copyCount = parseInt(copyCountElement.innerText)
+
+copyBtn.forEach((cp) => {
+    cp.addEventListener("click", () => {
+        let parent = cp.parentNode.parentNode
+        let serviceNumber = parent.querySelector('.service-number').innerText;
+
+        alert(`নম্বর কপি হয়েছেঃ ${serviceNumber}`)
+        copyCount++
+        copyCountElement.innerText = copyCount
+        navigator.clipboard.writeText(serviceNumber)
+
+    })
+})
