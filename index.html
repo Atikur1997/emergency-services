@@ -36,7 +36,7 @@
 
             <div
                 class="flex gap-3 items-center bg-[#41ff6b1a] py-4 px-5 justify-center rounded-3xl text-xl w-[125px] h-[50px] inter font-bold">
-                <p>0</p>
+                <p id="lovecounter">0</p>
                 <img src="assets/heart.png" alt="a heart with red color" class="w-6 h-6 ">
             </div>
 
@@ -76,13 +76,16 @@
     <!-- main section starts here -->
 
     <div class="w-full h-[100vh]  grid grid-cols-1  md:grid-cols-4 gap-0 px-0 md:px-12 mt-12  bg-[#f5fff6] gap-3 ">
-        <div class="left w-full h-full  col-span-3 grid grid-cols-1  gap-3 md:grid-cols-2 lg:grid-cols-3  lg:grid-cols-2 
-              md:jstify-between items-baseline">
+        <div class="left w-full h-full  col-span-3 grid grid-cols-1  gap-3 md:grid-cols-2 lg:grid-cols-3  
+               items-baseline">
 
             <!-- card starts here -->
             <div class="card bg-base-100 w-full shadow-md rounded-md">
 
-                <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                <div class="flex justify-between items-center p-4">
+                    <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                    <i class="fa-regular fa-heart w-6 h-6 cursor-pointer card-love"></i>
+                </div>
 
                 <div class="card-body">
                     <h2 class="card-title text-2xl font-bold hindMadurai">জাতীয় জরুরি সেবা</h2>
@@ -95,28 +98,32 @@
                     <button
                         class="btn btn-neutral btn-outline px-5 rounded-md w-[40%] mr-4 text-lg text-[#5C5C5C] hover:text-[white]"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="btn btn-active btn-success w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
+                    <button class="btn btn-active bg-[#00A63E] w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
                         Call</button>
                 </div>
             </div>
 
             <!-- police card starts here -->
             <div class="card bg-base-100 w-full shadow-md rounded-md">
+                <div class="flex justify-between items-center p-4">
 
-                <img src="assets/police.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                    <img src="assets/police.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                    <i class="fa-regular fa-heart w-6 h-6 cursor-pointer card-love"></i>
+                </div>
 
                 <div class="card-body">
                     <h2 class="card-title text-2xl font-bold hindMadurai">পুলিশ</h2>
                     <p class="text-[#5C5C5C]">Police</p>
                     <p class="text-3xl font-bold inter ">999</p>
                     <button
-                        class="btn btn-soft rounded-xl w-[130px] h-[40px] hindMadurai text-[#5c5c5c] text-lg font-thin">পুলিশ</button>
+                        class="btn  rounded-xl w-[130px] h-[40px] hindMadurai text-[#5c5c5c] text-lg font-thin">পুলিশ</button>
                 </div>
                 <div class="ml-5 pb-9">
                     <button
                         class="btn btn-neutral btn-outline px-5 rounded-md w-[40%] mr-4 text-lg text-[#5C5C5C] hover:text-[white]"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="btn btn-active btn-success w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
+                    <button class="btn btn-active bg-[#00A63E] w-[40%] text-lg rounded-lg"><i
+                            class="fa-solid fa-phone"></i>
                         Call</button>
                 </div>
             </div>
@@ -124,7 +131,10 @@
             <!-- fire service card starts here -->
             <div class="card bg-base-100 w-full shadow-md rounded-md">
 
-                <img src="assets/fire-service.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                <div class="flex justify-between items-center p-4">
+                    <img src="assets/fire-service.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                    <i class="fa-regular fa-heart w-6 h-6 cursor-pointer card-love"></i>
+                </div>
 
                 <div class="card-body">
                     <h2 class="card-title text-2xl font-bold hindMadurai">ফায়ার সার্ভিস</h2>
@@ -137,7 +147,7 @@
                     <button
                         class="btn btn-neutral btn-outline px-5 rounded-md w-[40%] mr-4 text-lg text-[#5C5C5C] hover:text-[white]"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="btn btn-active btn-success w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
+                    <button class="btn btn-active bg-[#00A63E] w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
                         Call</button>
                 </div>
             </div>
@@ -145,7 +155,10 @@
             <!-- ambulance card starts here -->
             <div class="card bg-base-100 w-full shadow-md rounded-md">
 
-                <img src="assets/ambulance.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                <div class="flex justify-between items-center p-4">
+                    <img src="assets/ambulance.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                    <i class="fa-regular fa-heart w-6 h-6 cursor-pointer card-love"></i>
+                </div>
 
                 <div class="card-body">
                     <h2 class="card-title text-2xl font-bold hindMadurai">অ্যাম্বুলেন্স</h2>
@@ -158,7 +171,7 @@
                     <button
                         class="btn btn-neutral btn-outline px-5 rounded-md w-[40%] mr-4 text-lg text-[#5C5C5C] hover:text-[white]"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="btn btn-active btn-success w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
+                    <button class="btn btn-active bg-[#00A63E] w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
                         Call</button>
                 </div>
             </div>
@@ -166,7 +179,10 @@
 
             <div class="card bg-base-100 w-full shadow-md rounded-md">
 
-                <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                <div class="flex justify-between items-center p-4">
+                    <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                    <i class="fa-regular fa-heart w-6 h-6 cursor-pointer card-love"></i>
+                </div>
 
                 <div class="card-body">
                     <h2 class="card-title text-2xl font-bold hindMadurai">নারী ও শিশু সহায়তা</h2>
@@ -179,7 +195,7 @@
                     <button
                         class="btn btn-neutral btn-outline px-5 rounded-md w-[40%] mr-4 text-lg text-[#5C5C5C] hover:text-[white]"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="btn btn-active btn-success w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
+                    <button class="btn btn-active bg-[#00A63E] w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
                         Call</button>
                 </div>
             </div>
@@ -187,10 +203,13 @@
             <!-- anti-corruption card starts here -->
             <div class="card bg-base-100 w-full shadow-md rounded-md">
 
-                <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                <div class="flex justify-between items-center p-4">
+                    <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                    <i class="fa-regular fa-heart w-6 h-6 cursor-pointer card-love"></i>
+                </div>
 
                 <div class="card-body">
-                    <h2 class="card-title text-2xl font-bold hindMadurai">সহায়তা</h2>
+                    <h2 class="card-title text-2xl font-bold hindMadurai">দুদক</h2>
                     <p class="text-[#5C5C5C]">Anti-Corruption</p>
                     <p class="text-3xl font-bold inter ">106</p>
                     <button
@@ -200,7 +219,7 @@
                     <button
                         class="btn btn-neutral btn-outline px-5 rounded-md w-[40%] mr-4 text-lg text-[#5C5C5C] hover:text-[white]"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="btn btn-active btn-success w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
+                    <button class="btn btn-active bg-[#00A63E] w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
                         Call</button>
                 </div>
             </div>
@@ -208,10 +227,13 @@
             <!-- Electricity outrage card starts here -->
             <div class="card bg-base-100 w-full shadow-md rounded-md">
 
-                <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                <div class="flex justify-between items-center p-4">
+                    <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                    <i class="fa-regular fa-heart w-6 h-6 cursor-pointer card-love"></i>
+                </div>
 
                 <div class="card-body">
-                    <h2 class="card-title text-2xl font-bold hindMadurai">বিদ্যুৎ বিভ্রাট</h2>
+                    <h2 class="card-title text-2xl font-bold hindMadurai ">বিদ্যুৎ বিভ্রাট</h2>
                     <p class="text-[#5C5C5C]">Electricity Outage</p>
                     <p class="text-3xl font-bold inter ">16216</p>
                     <button
@@ -221,7 +243,7 @@
                     <button
                         class="btn btn-neutral btn-outline px-5 rounded-md w-[40%] mr-4 text-lg text-[#5C5C5C] hover:text-[white]"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="btn btn-active btn-success w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
+                    <button class="btn btn-active bg-[#00A63E] w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
                         Call</button>
                 </div>
             </div>
@@ -229,7 +251,10 @@
             <!-- brac card starts here -->
             <div class="card bg-base-100 w-full shadow-md rounded-md">
 
-                <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                <div class="flex justify-between items-center p-4">
+                    <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                    <i class="fa-regular fa-heart w-6 h-6 cursor-pointer card-love"></i>
+                </div>
 
                 <div class="card-body">
                     <h2 class="card-title text-2xl font-bold hindMadurai">ব্র্যাক</h2>
@@ -242,7 +267,7 @@
                     <button
                         class="btn btn-neutral btn-outline px-5 rounded-md w-[40%] mr-4 text-lg text-[#5C5C5C] hover:text-[white]"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="btn btn-active btn-success w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
+                    <button class="btn btn-active bg-[#00A63E] w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
                         Call</button>
                 </div>
             </div>
@@ -252,31 +277,40 @@
 
             <div class="card bg-base-100 w-full shadow-md rounded-md">
 
-                <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                <div class="flex justify-between items-center p-4">
+                    <img src="assets/emergency.png" alt="" class="w-[60px] h-[60px] ml-5" />
+                    <i class="fa-regular fa-heart w-6 h-6 cursor-pointer card-love"></i>
+                </div>
 
                 <div class="card-body">
                     <h2 class="card-title text-2xl font-bold hindMadurai">বাংলাদেশ রেলওয়ে</h2>
                     <p class="text-[#5C5C5C]">Bangladesh Railway</p>
                     <p class="text-3xl font-bold inter ">163</p>
                     <button
-                        class="btn btn-soft rounded-xl w-[130px] h-[40px] hindMadurai text-[#5c5c5c] text-lg">পরিবহন</button>
+                        class="btn btn-soft rounded-xl w-[130px] h-[40px] hindMadurai text-[#5c5c5c] text-lg font-thin">পরিবহন</button>
                 </div>
                 <div class="ml-5 pb-9">
                     <button
                         class="btn btn-neutral btn-outline px-5 rounded-md w-[40%] mr-4 text-lg text-[#5C5C5C] hover:text-[white]"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="btn btn-active btn-success w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
+                    <button class="btn btn-active bg-[#00A63E] w-[40%] text-lg"><i class="fa-solid fa-phone"></i>
                         Call</button>
                 </div>
             </div>
         </div>
         <!--  card ends here -->
 
-        <div class=" right h-full border-2 border-yellow-500"> 
-            
+        <div class=" right h-full  shadow-xl p-3">
+            <div class="flex justify-between">
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="inter font-semibold">Call History</p>
+                </div>
+                <button class="btn bg-[#00A63E] rounded-2xl py-3 px-9  text-white hindMadurai">Clear</button>
+            </div>
         </div>
     </div>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
