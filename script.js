@@ -1,6 +1,9 @@
 let loveIcons = document.querySelectorAll(".card-love");
 let loveCounter = document.getElementById('lovecounter')
 let loveCount = 0;
+let callHistory = []
+
+
 
 
 // for coin counting 
@@ -32,6 +35,7 @@ loveIcons.forEach((icon) => {
 
 let callbtn = document.querySelectorAll('.card-call')
 
+
 callbtn.forEach((btn) => {
     btn.addEventListener('click', () => {
         let parent = btn.parentNode.parentNode
@@ -48,5 +52,36 @@ callbtn.forEach((btn) => {
             alert('❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে')
         }
 
+        // call history starts here
+
+        let callList = {
+            serviceName: serviceName,
+            serviceNumber: serviceNumber,
+            time: new Date().toLocaleTimeString()
+        }
+
+        callHistory.push(callList)
+
+        let rightDown = document.querySelector('.right .right-down')
+        rightDown.innerHTML = ''
+
+        for (let call of callHistory) {
+            const div = document.createElement('div')
+            div.innerHTML = `
+             <div class ="flex justify-between items-center my-3 bg-[#FAFAFA] rounded-md py-4 px-3">
+             <div>
+                    <h1>${call.serviceName}</h1>
+                    <p>${call.serviceNumber}</p>
+                </div>
+                <div>
+                    ${call.time}
+                </div>
+             </div>
+            `
+            rightDown.appendChild(div)
+        }
+
+
     })
+
 })
