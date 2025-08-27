@@ -47,27 +47,22 @@ callbtn.forEach((btn) => {
             alert(`📞 calling ${serviceName} at ${serviceNumber}...`)
             coinAmount = coinAmount - 20;
             coinElement.innerText = coinAmount
-        }
-        else {
-            alert('❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে')
-        }
+            // call history starts here
 
-        // call history starts here
+            let callList = {
+                serviceName: serviceName,
+                serviceNumber: serviceNumber,
+                time: new Date().toLocaleTimeString()
+            }
 
-        let callList = {
-            serviceName: serviceName,
-            serviceNumber: serviceNumber,
-            time: new Date().toLocaleTimeString()
-        }
+            callHistory.push(callList)
 
-        callHistory.push(callList)
+            let rightDown = document.querySelector('.right .right-down')
+            rightDown.innerHTML = ''
 
-        let rightDown = document.querySelector('.right .right-down')
-        rightDown.innerHTML = ''
-
-        for (let call of callHistory) {
-            const div = document.createElement('div')
-            div.innerHTML = `
+            for (let call of callHistory) {
+                const div = document.createElement('div')
+                div.innerHTML = `
              <div class ="flex justify-between items-center my-3 bg-[#FAFAFA] rounded-md py-4 px-3">
              <div>
                     <h1>${call.serviceName}</h1>
@@ -78,8 +73,14 @@ callbtn.forEach((btn) => {
                 </div>
              </div>
             `
-            rightDown.appendChild(div)
+                rightDown.appendChild(div)
+            }
         }
+        else {
+            alert('❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে')
+        }
+
+
 
 
     })
