@@ -85,3 +85,11 @@ callbtn.forEach((btn) => {
     })
 
 })
+
+// clear button work starts here 
+let clearBtn = document.getElementById('clearBtn')
+clearBtn.addEventListener('click', () => {
+    let rightDown = document.querySelector('.right .right-down')
+    rightDown.innerHTML = ''
+    callHistory = []
+})
